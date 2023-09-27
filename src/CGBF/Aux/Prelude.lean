@@ -1,5 +1,6 @@
 import CGBF.Aux.Options
-import Mathlib
+import Mathlib.Tactic
+import Mathlib.Util.PiNotation
 
 section
 open Lean PrettyPrinter Delaborator SubExpr

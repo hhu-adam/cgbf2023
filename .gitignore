@@ -9,6 +9,7 @@ _minted-skript
 *.bbl
 *.blg
 *.out
+*.olean
 
 /build
 /lake-packages/*

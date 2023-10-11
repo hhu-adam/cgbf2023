@@ -1,4 +1,4 @@
-import CGBF.Settings.Options
+import CGBF.Settingsiliary.Options
 import Mathlib.Tactic
 import Mathlib.Util.PiNotation
 

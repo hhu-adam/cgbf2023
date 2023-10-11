@@ -1,4 +1,4 @@
-import CGBF.Aux.Prelude
+import CGBF.Settings.Prelude
 
 axiom A : Type
 axiom h : A → A → A → A → A → A

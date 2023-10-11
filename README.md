@@ -18,9 +18,9 @@ Gehen Sie wie folgt vor:
 3. Öffnen Sie eine Konsole/Terminal/Git Bash und navigieren Sie mithilfe von `cd` zu
 einem Ort, an dem Sie die Projektdateien ablegen möchten.
 
-4. Führen Sie `git clone https://github.com/lftcm2023/lftcm2023.git` aus.
+4. Führen Sie `git clone https://github.com/hhu-adam/cgbf2023.git` aus.
 
-5. Führen Sie `cd lftcm2023` aus.
+5. Führen Sie `cd cgbf2023` aus.
 
 6. Führen Sie `lake exe cache get` aus.
 
@@ -63,4 +63,4 @@ Ansonsten schließt sich Gitpod erst nach
 
 Um einen bereits bestehenden Workspace wiederherzustellen gehen Sie auf [https://gitpod.io/workspaces/](https://gitpod.io/workspaces/).
 Unter "Inactive Workspaces" finden Sie alle kürzlich verwendeten Workspaces.
-Sie können einen Workspace "anpinnen", um ihn in der Liste der aktiven Workspaces zu halten. 
+Sie können einen Workspace "anpinnen", um ihn in der Liste der aktiven Workspaces zu halten.

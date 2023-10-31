@@ -19,4 +19,19 @@ def delabFoo : Delab := do
 
 end
 
-open PiNotation
+attribute [delab forallE] PiNotation.delabPi
+
+-- Lean's original `#check` command behaves slightly differently for single constants. We make it more consistent here:
+open Lean Elab Command Meta
+def elabCheckCore' (ignoreStuckTC : Bool) : CommandElab
+  | `(#check%$tk $term) => withoutModifyingEnv <| runTermElabM fun _ => Term.withDeclName `_check do
+    let e ← Term.elabTerm term none
+    Term.synthesizeSyntheticMVarsNoPostponing (ignoreStuckTC := ignoreStuckTC)
+    let e ← Term.levelMVarToParam (← instantiateMVars e)
+    let type ← inferType e
+    if e.isSyntheticSorry then
+      return
+    logInfoAt tk m!"{e} : {type}"
+  | _ => throwUnsupportedSyntax
+
+@[command_elab Lean.Parser.Command.check] def elabCheck : CommandElab := elabCheckCore' (ignoreStuckTC := true)

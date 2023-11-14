@@ -176,12 +176,12 @@ end DFin
 /- ## 4. Beweise mit `And` und `Or`
 
 Die Konstruktoren und Eliminationsregeln von `And` und `Or` kennen Sie aus der Vorlesung: -/
-#check And.intro
-#check Or.inl
-#check Or.inr
-#check And.left
-#check And.right
-#check Or.elim
+#check @And.intro
+#check @Or.inl
+#check @Or.inr
+#check @And.left
+#check @And.right
+#check @Or.elim
 
 /- Die Notation `p ∧ q` (Eingabe: \and) steht für `And p q`. Die Notation `p ∨ q` (Eingabe: \or)
 steht für `Or p q`. Sie können mit der Maus über Sonderzeichen fahren, um zu sehen wie sie

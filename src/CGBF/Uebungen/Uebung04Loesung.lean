@@ -90,7 +90,7 @@ Definieren Sie eine Funktion `verbinde`, die zwei Listen hintereinander hängt.
 
 def verbinde.{u} {X : Type u} : List X → List X → List X
 | [],    ys => ys
-| x::xs, ys => x :: List.append xs ys
+| x::xs, ys => x :: verbinde xs ys
 
 -- Überprüfen Sie Ihre Lösung hier.
 #reduce verbinde [2, 3] [4, 5, 6] -- erwartet: [2, 3, 4, 5, 6]

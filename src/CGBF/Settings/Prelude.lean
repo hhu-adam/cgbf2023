@@ -35,3 +35,5 @@ def elabCheckCore' (ignoreStuckTC : Bool) : CommandElab
   | _ => throwUnsupportedSyntax
 
 @[command_elab Lean.Parser.Command.check] def elabCheck : CommandElab := elabCheckCore' (ignoreStuckTC := true)
+
+def Eq.rfl.{u} {X : Sort u} {x : X} : x = x := Eq.refl x
